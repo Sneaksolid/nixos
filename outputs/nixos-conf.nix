@@ -5,6 +5,7 @@
     inherit system;
     modules = [
       "${self}/modules/base.nix"
+      "${self}/modules/users.nix"
       "${self}/modules/nixos-vm.nix"
       "${self}/hardware/nixos-vm.nix"
     ];
