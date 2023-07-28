@@ -25,5 +25,11 @@
 	    inherit self system nixpkgs;
 	  }
 	);
+
+	homeConfigurations = (
+	  import "${self}/outputs/home-conf.nix" {
+	    inherit self system nixpkgs home-manager;
+	  }
+	);
       };
 }
