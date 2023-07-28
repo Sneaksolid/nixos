@@ -27,6 +27,15 @@ in
 
 	  programs = {
 	    home-manager.enable = true;
+
+            git = {
+              enable = true;
+              aliases = {
+                co = "checkout";
+              };
+              userName = "Mathias Kahr";
+              userEmail = "m.kahr@trever.io";
+            };
 	  };
 	}
       ];
