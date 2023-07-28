@@ -23,10 +23,11 @@ in
 	    stateVersion = "23.05";
 	    packages = with pkgs; [ neofetch ];
 
-	    programs = {
-	      home-manager.enable = true;
-	    };
 	  }; 
+
+	  programs = {
+	    home-manager.enable = true;
+	  };
 	}
       ];
     }; 
