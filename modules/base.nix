@@ -1,8 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running `nixos-help`).
-
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   boot.loader.systemd-boot.enable = true;
@@ -21,16 +17,14 @@
     '';
   };
 
-  ## system packages
+  ## default packages
+  ## ensure vim is installed in case
+  ## we need to edit something
   environment.systemPackages = with pkgs; [
     vim
   ];
 
-  ## services
-  services.qemuGuest.enable = true;
-
   ## system config
   console.keyMap = "de";
-
 }
 
