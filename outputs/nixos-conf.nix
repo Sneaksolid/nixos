@@ -1,12 +1,12 @@
 {self, nixpkgs, system, ...}:
 
 {
-  qemu = nixpkgs.lib.nixosSystem {
+  nixos-vm = nixpkgs.lib.nixosSystem {
     inherit system;
     modules = [
       "${self}/modules/base.nix"
-      "${self}/modules/qemu.nix"
-      "${self}/hardware/qemu.nix"
+      "${self}/modules/nixos-vm.nix"
+      "${self}/hardware/nixos-vm.nix"
     ];
   };
 }
