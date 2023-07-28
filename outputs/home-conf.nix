@@ -22,6 +22,10 @@ in
 	    inherit username homeDirectory;
 	    stateVersion = "23.05";
 	    packages = with pkgs; [ neofetch ];
+
+	    programs = {
+	      home-manager.enable = true;
+	    };
 	  }; 
 	}
       ];
