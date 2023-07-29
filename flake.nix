@@ -25,7 +25,7 @@
 
         nixosConfigurations = (
 	  import "${self}/outputs/nixos-conf.nix" {
-	    inherit self system nixpkgs;
+	    inherit self system nixpkgs home-manager;
 	  }
 	);
 
