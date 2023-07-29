@@ -3,13 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+	
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: 
+  outputs = { self, nixpkgs, home-manager, hyprland, ... }: 
     let
       system = "x86_64-linux";
     in
@@ -28,7 +31,7 @@
 
 	homeConfigurations = (
 	  import "${self}/outputs/home-conf.nix" {
-	    inherit self system nixpkgs home-manager;
+	    inherit self system nixpkgs home-manager hyprland;
 	  }
 	);
       };

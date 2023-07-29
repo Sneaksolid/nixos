@@ -1,4 +1,4 @@
-{ system, nixpkgs, home-manager, ... }:
+{ system, nixpkgs, home-manager, hyprland, ... }:
 
 let 
   username = "mathias";
@@ -17,6 +17,7 @@ in
 
       modules = [
         # TODO export this to a module
+	hyprland.homeManagerModules.default
 	{
 	  home = {
 	    inherit username homeDirectory;
@@ -36,6 +37,10 @@ in
               userName = "Mathias Kahr";
               userEmail = "m.kahr@trever.io";
             };
+	  };
+
+	  wayland.windowManager.hyprland = {
+	    enable = true;
 	  };
 	}
       ];
