@@ -7,9 +7,9 @@
   system.stateVersion = "23.05";
 
   # Generic system config
-  
+
   time.timeZone = "Europe/Vienna";
-  
+
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''

@@ -1,4 +1,4 @@
-{ ... }: 
+{ ... }:
 
 {
   users.users.mathias = {
@@ -6,8 +6,8 @@
     home = "/home/mathias";
     description = "Mathias";
     extraGroups = [
-      "wheel" 
-      "video" 
+      "wheel"
+      "video"
       "input"
     ];
   };

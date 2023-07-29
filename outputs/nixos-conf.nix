@@ -1,4 +1,4 @@
-{self, nixpkgs, home-manager, system, ...}: 
+{ self, nixpkgs, home-manager, system, ... }:
 
 let
   hm-config = [
