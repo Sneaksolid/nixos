@@ -5,6 +5,10 @@
     isNormalUser = true;
     home = "/home/mathias";
     description = "Mathias";
-    extraGroups = ["wheel" "video"];
+    extraGroups = [
+      "wheel" 
+      "video" 
+      "input"
+    ];
   };
 }
