@@ -4,7 +4,26 @@
   enable = true;
   settings = {
     "$mainMod" = "${mainMod}";
-    "$lockCmd" = "swaylock --fingerprint -c $HOME/.config/swaylock/config";
+    "$lockCmd" = "swaylock -c $HOME/.config/swaylock/config";
+
+    input = {
+      kb_layout = "de";
+      kb_variant = "";
+      kb_model = "";
+      kb_options = "caps:escape";
+      kb_rules = "";
+      repeat_delay = 300;
+      repeat_rate = 50;
+
+      follow_mouse = 1;
+
+      touchpad = {
+        natural_scroll = "no";
+      };
+
+      sensitivity = 0;
+    };
+
     bind = [
       "$mainMod, RETURN, exec, alacritty"
       "$mainMod, Q, killactive, "
