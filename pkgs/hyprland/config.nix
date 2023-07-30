@@ -24,6 +24,42 @@
       sensitivity = 0;
     };
 
+    general = {
+      gaps_in = 5;
+      gaps_out = 20;
+      border_size = 1;
+      # col.active_border = $sky;
+      # col.inactive_border = $mantle;
+
+      layout = "dwindle";
+    };
+
+    decoration = {
+      rounding = 10;
+      multisample_edges = "false";
+
+      blur = "yes";
+      blur_size = 10;
+      blur_passes = 1;
+      blur_new_optimizations = "true";
+    };
+
+    animations = {
+      enabled = "yes";
+
+      bezier = [
+        "myBezier, 0.05, 0.9, 0.1, 1.05"
+      ];
+
+      animation = [
+        "windows, 1, 7, myBezier"
+        "windowsOut, 1, 7, default, popin 80%"
+        "border, 1, 10, default"
+        "fade, 1, 7, default"
+        "workspaces, 1, 6, default"
+      ];
+    };
+
     bind = [
       "$mainMod, RETURN, exec, alacritty"
       "$mainMod, Q, killactive, "
