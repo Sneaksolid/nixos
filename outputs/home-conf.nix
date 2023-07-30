@@ -13,7 +13,7 @@ let
   };
 in
 {
-  mathias = home-manager.lib.homeManagerConfiguration {
+  "mathias@nixos-vm" = home-manager.lib.homeManagerConfiguration {
     inherit pkgs;
 
     modules = [
