@@ -10,7 +10,8 @@
     ];
 
     file = {
-      ".config/alacritty/theme.yml".source = "${self}/themes/alacritty/theme.yml";
+      ".config/alacritty/theme.yml".source = 
+        "${self}/themes/alacritty/theme.yml";
     };
   };
 
@@ -29,6 +30,9 @@
     alacritty = {
       enable = true;
       settings = {
+        import = [
+          "$HOME/.config/alacritty/theme.yml"
+	];
         font = {
           normal = {
             family = "JetBrains Mono Nerd Font";
