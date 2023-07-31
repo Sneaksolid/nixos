@@ -22,5 +22,17 @@
       userName = "Mathias Kahr";
       userEmail = "m.kahr@trever.io";
     };
+
+    alacritty = {
+      enable = true;
+      settings = {
+        font = {
+          normal = {
+            family = "JetBrains Mono Nerd Font";
+            style = "Regular";
+          };
+        };
+      };
+    };
   };
 }
