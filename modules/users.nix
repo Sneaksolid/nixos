@@ -9,6 +9,7 @@
       "wheel"
       "video"
       "input"
+      "sys"
     ];
   };
 }
