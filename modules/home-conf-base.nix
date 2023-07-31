@@ -10,7 +10,7 @@
     ];
 
     file = {
-	".config/alacritty/theme.yml".source = "${self}/alacritty/theme.yml";
+      ".config/alacritty/theme.yml".source = "${self}/themes/alacritty/theme.yml";
     };
   };
 
