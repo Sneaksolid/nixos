@@ -1,4 +1,4 @@
-{ pkgs, username, homeDirectory, ... }:
+{ self, pkgs, username, homeDirectory, ... }:
 
 {
   home = {
@@ -9,6 +9,9 @@
       nerdfonts
     ];
 
+    file = {
+	".config/alacritty/theme.yml".source = "${self}/alacritty/theme.yml";
+    };
   };
 
   programs = {
