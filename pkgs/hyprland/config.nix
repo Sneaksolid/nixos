@@ -60,6 +60,19 @@
       ];
     };
 
+    dwindle = {
+      pseudotile = "yes";
+      preserve_split = "yes";
+    };
+
+    master = {
+      new_is_master = "true";
+    };
+
+    gestures = {
+      workspace_swipe = "on";
+    };
+
     bind = [
       "$mainMod, RETURN, exec, alacritty"
       "$mainMod, Q, killactive, "
@@ -110,6 +123,21 @@
       # Scroll through existing workspaces with mainMod + scroll
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"
+    ];
+
+    bindm = [
+       "$mainMod, mouse:272, movewindow"
+       "$mainMod, mouse:273, resizewindow"
+    ];
+
+    bindl = [
+      " , XF86AudioRaiseVolume, exec, pamixer -ui 2"
+      " , XF86AudioLowerVolume, exec, pamixer -ud 2"
+      " , XF86AudioMute, exec, pamixer -t"
+
+      " , XF86MonBrightnessUp, exec, brightnessctl -c backlight set +5%"
+      " , XF86MonBrightnessDown, exec, brightnessctl -c backlight set 5%-"
+      " , switch:Lid Switch, exec, $lockCmd"
     ];
   };
 }
