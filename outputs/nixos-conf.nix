@@ -19,5 +19,15 @@ in
       "${self}/hardware/nixos-vm.nix"
     ] ++ hm-config;
   };
+
+  xpsFrank = nixpkgs.lib.nixosSystem {
+    inherit system;
+    modules = [
+      "${self}/modules/base.nix"
+      "${self}/modules/users.nix"
+      "${self}/modules/xpsFrank.nix"
+      "${self}/hardware/xpsFrank.nix"
+    ] ++ hm-config;
+  };
 }
 

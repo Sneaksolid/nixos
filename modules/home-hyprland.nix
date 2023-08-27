@@ -5,4 +5,8 @@
     import "${self}/pkgs/hyprland/config.nix"
       { inherit mainMod; }
   );
+
+  programs.wofi = {
+    enable = true;
+  };
 }

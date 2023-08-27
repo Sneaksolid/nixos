@@ -13,14 +13,14 @@ let
   };
 in
 {
-  "mathias@nixos-vm" = home-manager.lib.homeManagerConfiguration {
+  mathias = home-manager.lib.homeManagerConfiguration {
     inherit pkgs;
 
     extraSpecialArgs = {
       inherit username;
       inherit homeDirectory;
       inherit self;
-      mainMod = "ALT";
+      mainMod = "SUPER";
     };
 
     modules = [

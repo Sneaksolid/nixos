@@ -17,6 +17,8 @@
     '';
   };
 
+  networking.networkmanager.enable = true;
+
   ## default packages
   ## ensure vim is installed in case
   ## we need to edit something

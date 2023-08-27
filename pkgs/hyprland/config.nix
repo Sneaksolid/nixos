@@ -6,6 +6,18 @@
     "$mainMod" = "${mainMod}";
     "$lockCmd" = "swaylock -c $HOME/.config/swaylock/config";
 
+    exec-once = [
+      "waybar"
+      "mako"
+      "nm-applet --indicator "
+      "gnome-keyring-daemon --start"
+      "hyprpaper -n"
+    ];
+
+    monitor = [
+	"eDP-1,1920x1200@60,auto,1.2"
+    ];
+
     input = {
       kb_layout = "de";
       kb_variant = "";
@@ -28,8 +40,8 @@
       gaps_in = 5;
       gaps_out = 20;
       border_size = 1;
-      # col.active_border = $sky;
-      # col.inactive_border = $mantle;
+      "col.active_border" = "0xff89dceb";
+      "col.inactive_border" = "0xff181825";
 
       layout = "dwindle";
     };
@@ -71,6 +83,10 @@
 
     gestures = {
       workspace_swipe = "on";
+    };
+
+    xwayland = {
+      force_zero_scaling = "true";
     };
 
     bind = [
