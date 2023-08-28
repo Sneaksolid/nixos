@@ -18,37 +18,42 @@ in
       neofetch
       nerfontsOld
       firefox
-      gcc
-      nixd
       btop
       pavucontrol
-      pulseaudio
+      pamixer
       blueman
       flat-remix-icon-theme
       sops
       bitwarden
       telegram-desktop
-
-      # node
-      nodejs_18
+      spotify
+      slack
     ];
+
+    pointerCursor = {
+      name = "Adwaita";
+      package = pkgs.gnome.adwaita-icon-theme;
+      size = 24;
+      gtk.enable = true;
+    };
+
+    sessionVariables = {
+      EDITOR = "vim";
+      PATH = "$PATH:$HOME/go/bin:$HOME/.local/bin:$HOME/.config/hypr/scripts:/opt/flutter/bin";
+      DEV_ENVIRONMENT = "mka";
+      GOPATH = "$HOME/go";
+      MOZ_ENABLE_WAYLAND = "1";
+      DOCKER_BUILDKIT = "1";
+    };
   };
 
-  home.sessionVariables = {
-    EDITOR = "vim";
-    PATH = "$PATH:$HOME/go/bin:$HOME/.local/bin:$HOME/.config/hypr/scripts:/opt/flutter/bin";
-    DEV_ENVIRONMENT = "mka";
-    GOPATH = "$HOME/go";
-    MOZ_ENABLE_WAYLAND = "1";
-    DOCKER_BUILDKIT = "1";
-  };
+  gtk.enable = true;
 
   sops = {
     age.keyFile = "${homeDirectory}/.config/sops/age/keys.txt";
   };
 
   fonts.fontconfig.enable = true;
-
   programs = {
     home-manager.enable = true;
 

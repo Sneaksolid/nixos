@@ -6,8 +6,8 @@
     wl-clipboard
     networkmanagerapplet
     waybar
-    mako
     gnome.gnome-keyring
+    swaylock
   ];
 
   home.file = {
@@ -37,6 +37,12 @@
       source = "${self}/pkgs/wofi";
       target = ".config/wofi";
     };
+
+    swaylock = {
+      recursive = true;
+      source = "${self}/pkgs/swaylock";
+      target = ".config/swaylock";
+    };
   };
 
   home.sessionVariables = {
@@ -50,6 +56,11 @@
 
   programs.wofi = {
     enable = true;
+  };
+
+  services.mako = {
+    enable = true;
+    defaultTimeout = 5;
   };
 
   services.kanshi = {

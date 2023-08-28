@@ -8,10 +8,10 @@
 
     exec-once = [
       "waybar"
-      "mako"
-      "nm-applet --indicator "
+      "nm-applet --indicator"
       "gnome-keyring-daemon --start"
       "hyprpaper -n"
+      "hyprctl setcursor Adwaita 24"
     ];
 
     input = {

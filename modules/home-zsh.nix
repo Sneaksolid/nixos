@@ -37,6 +37,7 @@
       ps = "procs";
     };
     initExtra = ''
+    			hostname=$(hostname)
                         if [[ "$hostname" = "xpsFrank" ]]; then
                   
                         	eval "$(zoxide init zsh)"
@@ -45,6 +46,8 @@
                         	  exec Hyprland
                         	fi
                         fi
+
+			source ~/.zshrc_private
       		'';
   };
 }

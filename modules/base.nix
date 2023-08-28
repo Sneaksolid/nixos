@@ -54,5 +54,19 @@
   programs = {
     zsh.enable = true;
   };
+
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = false;
+    autoPrune.enable = true;
+    daemon.settings = {
+      insecure-registries = [ "k3d-local:5111" ];
+    };
+  };
+
+  networking.extraHosts = ''
+  	127.0.0.1 api.local.trever.io	
+	127.0.0.1 k3d-local
+  '';
 }
 

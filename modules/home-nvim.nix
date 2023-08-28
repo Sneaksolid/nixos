@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self, pkgs, ... }:
 
 {
   home.file = {
@@ -8,6 +8,13 @@
       target = ".config/nvim";
     };
   };
+
+  home.packages = with pkgs; [
+      gcc
+      nixd
+      gcc
+      nodejs_18
+  ];
 
   programs.neovim = {
     enable = true;

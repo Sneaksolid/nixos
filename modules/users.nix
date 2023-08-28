@@ -12,6 +12,7 @@
       "input"
       "sys"
       "audio"
+      "docker"
     ];
   };
 }
