@@ -83,9 +83,9 @@
       workspace_swipe = "on";
     };
 
-    # xwayland = {
-    #   force_zero_scaling = "true";
-    # };
+    xwayland = {
+      force_zero_scaling = "true";
+    };
 
     bind = [
       "$mainMod, RETURN, exec, alacritty"

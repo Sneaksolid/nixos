@@ -10,12 +10,12 @@
   };
 
   home.packages = with pkgs; [
-      gcc
-      nixd
-      gcc
-      nodejs_18
+    gcc
+    nixd
+    gcc
+    nodejs_18
 
-      nodePackages.typescript-language-server
+    nodePackages.typescript-language-server
   ];
 
   programs.neovim = {

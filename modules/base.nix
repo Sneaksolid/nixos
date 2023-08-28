@@ -75,13 +75,13 @@
   };
 
   # networking
-  
+
   networking.firewall = {
     allowedTCPPorts = [
-    	6379 # redis
-	5432 # postgres
-	9092 # kafka
-	4566 # localstack api
+      6379 # redis
+      5432 # postgres
+      9092 # kafka
+      4566 # localstack api
     ];
 
     allowedTCPPortRanges = [
@@ -90,8 +90,8 @@
   };
 
   networking.extraHosts = ''
-  	127.0.0.1 api.local.trever.io	
-	127.0.0.1 k3d-local
+      	127.0.0.1 api.local.trever.io	
+    	127.0.0.1 k3d-local
   '';
 }
 
