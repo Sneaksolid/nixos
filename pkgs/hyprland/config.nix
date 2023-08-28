@@ -14,10 +14,6 @@
       "hyprpaper -n"
     ];
 
-    monitor = [
-	"eDP-1,1920x1200@60,auto,1.2"
-    ];
-
     input = {
       kb_layout = "de";
       kb_variant = "";
@@ -50,10 +46,12 @@
       rounding = 10;
       multisample_edges = "false";
 
-      blur = "yes";
-      blur_size = 10;
-      blur_passes = 1;
-      blur_new_optimizations = "true";
+      blur = {
+        enabled = "yes";
+        size = 10;
+        passes = 1;
+        new_optimizations = "true";
+      };
     };
 
     animations = {
@@ -85,9 +83,9 @@
       workspace_swipe = "on";
     };
 
-    xwayland = {
-      force_zero_scaling = "true";
-    };
+    # xwayland = {
+    #   force_zero_scaling = "true";
+    # };
 
     bind = [
       "$mainMod, RETURN, exec, alacritty"

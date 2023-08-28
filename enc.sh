@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function encrypt() {
 	echo "enc ${1} => ${2}"

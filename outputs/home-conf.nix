@@ -1,4 +1,4 @@
-{ self, system, nixpkgs, home-manager, ... }:
+{ self, system, nixpkgs, home-manager, sops-nix, ... }:
 
 
 let
@@ -17,6 +17,7 @@ in
     inherit pkgs;
 
     extraSpecialArgs = {
+      inherit system;
       inherit username;
       inherit homeDirectory;
       inherit self;
@@ -24,8 +25,12 @@ in
     };
 
     modules = [
+      sops-nix.homeManagerModules.sops
       "${self}/modules/home-conf-base.nix"
       "${self}/modules/home-hyprland.nix"
+      "${self}/modules/home-alacritty.nix"
+      "${self}/modules/home-nvim.nix"
+      "${self}/modules/home-zsh.nix"
     ];
   };
 }

@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
@@ -14,16 +15,26 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/687c5d8f-c7d3-4eaf-b00f-2a9dc98533c5";
+    {
+      device = "/dev/disk/by-uuid/687c5d8f-c7d3-4eaf-b00f-2a9dc98533c5";
       fsType = "ext4";
+      options = [ "defaults" "noatime" "commit=60" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/DE09-F568";
+    {
+      device = "/dev/disk/by-uuid/DE09-F568";
       fsType = "vfat";
     };
 
   swapDevices = [ ];
+
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+    ];
+  };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
@@ -35,4 +46,6 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  hardware.bluetooth.enable = true;
 }

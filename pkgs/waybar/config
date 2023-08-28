@@ -48,7 +48,7 @@
     },
     "memory": {
         "interval": 5,
-        "format": " {}%", // Icon: memory
+        "format": "  {}%", // Icon: memory
         "on-click": "alacritty -e 'btop'", 
         "states": {
             "warning": 70,
