@@ -14,6 +14,8 @@
       nixd
       gcc
       nodejs_18
+
+      nodePackages.typescript-language-server
   ];
 
   programs.neovim = {

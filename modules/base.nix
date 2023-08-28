@@ -29,6 +29,16 @@
   ## system config
   console.keyMap = "de";
 
+  # limits
+  security.pam.loginLimits = [{
+    domain = "*";
+    type = "soft";
+    item = "nofile";
+    value = "8192";
+  }];
+
+  boot.kernel.sysctl."fs.inotify.max_user_instances" = 8192;
+
   ## audio stuff
   security.rtkit.enable = true;
   services.pipewire = {
@@ -62,6 +72,21 @@
     daemon.settings = {
       insecure-registries = [ "k3d-local:5111" ];
     };
+  };
+
+  # networking
+  
+  networking.firewall = {
+    allowedTCPPorts = [
+    	6379 # redis
+	5432 # postgres
+	9092 # kafka
+	4566 # localstack api
+    ];
+
+    allowedTCPPortRanges = [
+      { from = 4510; to = 4559; } # localstack services
+    ];
   };
 
   networking.extraHosts = ''
