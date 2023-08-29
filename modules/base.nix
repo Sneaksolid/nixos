@@ -49,6 +49,7 @@
   };
 
   services.blueman.enable = true;
+  services.fwupd.enable = true;
 
   environment.etc = {
     "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
