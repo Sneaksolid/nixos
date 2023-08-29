@@ -28,6 +28,7 @@ in
       telegram-desktop
       spotify
       slack
+      playerctl
     ];
 
     pointerCursor = {
