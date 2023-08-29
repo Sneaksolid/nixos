@@ -25,7 +25,6 @@ in
     modules = [
       "${self}/modules/base.nix"
       "${self}/modules/users.nix"
-      "${self}/modules/xpsFrank.nix"
       "${self}/hardware/xpsFrank.nix"
     ] ++ hm-config;
   };
