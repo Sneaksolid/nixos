@@ -8,6 +8,12 @@
     waybar
     gnome.gnome-keyring
     swaylock
+    brightnessctl
+    playerctl
+    pavucontrol
+    blueman
+    pamixer
+    flat-remix-icon-theme
   ];
 
   home.file = {

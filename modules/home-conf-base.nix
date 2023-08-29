@@ -19,16 +19,11 @@ in
       nerfontsOld
       firefox
       btop
-      pavucontrol
-      pamixer
-      blueman
-      flat-remix-icon-theme
       sops
       bitwarden
       telegram-desktop
       spotify
       slack
-      playerctl
     ];
 
     pointerCursor = {
