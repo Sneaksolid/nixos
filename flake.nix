@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     sops-nix.url = "github:mic92/sops-nix";
+    plasma-manager.url = "github:pjones/plasma-manager";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -11,7 +12,14 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, sops-nix, ... }:
+  outputs =
+    { self
+    , nixpkgs
+    , home-manager
+    , sops-nix
+    , plasma-manager
+    , ...
+    }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -33,7 +41,7 @@
 
       homeConfigurations = (
         import "${self}/outputs/home-conf.nix" {
-          inherit self system nixpkgs home-manager sops-nix;
+          inherit self system nixpkgs home-manager sops-nix plasma-manager;
         }
       );
     };

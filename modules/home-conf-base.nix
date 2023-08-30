@@ -24,6 +24,7 @@ in
       telegram-desktop
       spotify
       slack
+      curl
     ];
 
     sessionVariables = {

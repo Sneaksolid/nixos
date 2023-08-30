@@ -1,4 +1,11 @@
-{ self, system, nixpkgs, home-manager, sops-nix, ... }:
+{ self
+, system
+, nixpkgs
+, home-manager
+, sops-nix
+, plasma-manager
+, ...
+}:
 
 let
   username = "mathias";
@@ -47,8 +54,10 @@ in
 
     modules = [
       sops-nix.homeManagerModules.sops
+      plasma-manager.homeManagerModules.plasma-manager
       "${self}/modules/home-conf-base.nix"
       "${self}/modules/home-disable-gtk2-conf.nix"
+      "${self}/modules/home-plasma-config.nix"
       "${self}/modules/home-alacritty.nix"
       "${self}/modules/home-nvim.nix"
       "${self}/modules/home-zsh.nix"
