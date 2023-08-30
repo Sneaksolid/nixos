@@ -34,6 +34,7 @@ in
     modules = [
       "${self}/modules/base.nix"
       "${self}/modules/users.nix"
+      "${self}/modules/steam.nix"
       "${self}/hardware/desktopFrank.nix"
     ] ++ hm-config;
   };

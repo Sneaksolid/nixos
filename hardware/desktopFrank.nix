@@ -14,12 +14,20 @@
     {
       device = "/dev/disk/by-uuid/ca835341-d560-4edc-803b-ab72eaf2d49b";
       fsType = "ext4";
+      options = [ "defaults" "noatime" "commit=60" ];
     };
 
   fileSystems."/boot" =
     {
       device = "/dev/disk/by-uuid/F7B7-B9FD";
       fsType = "vfat";
+    };
+
+  fileSystems."/mnt/DATA" = 
+    {
+      device = "/dev/disk/by-uuid/948378ae-80ea-4a9e-8f90-fe747a539f35";
+      fsType = "ext4";
+      options = [ "defaults" "noatime" "commit=60" ];
     };
 
   swapDevices =

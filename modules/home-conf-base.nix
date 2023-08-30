@@ -17,14 +17,18 @@ in
     packages = with pkgs; [
       neofetch
       nerfontsOld
-      firefox
       btop
       sops
-      bitwarden
-      telegram-desktop
+      curl
+
+      # desktop apps
       spotify
       slack
-      curl
+      firefox
+      bitwarden
+      telegram-desktop
+      discord
+      teams
     ];
 
     sessionVariables = {
