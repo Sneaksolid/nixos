@@ -28,5 +28,14 @@ in
       "${self}/hardware/xpsFrank.nix"
     ] ++ hm-config;
   };
+
+  desktopFrank = nixpkgs.lib.nixosSystem {
+    inherit system;
+    modules = [
+      "${self}/modules/base.nix"
+      "${self}/modules/users.nix"
+      "${self}/hardware/desktopFrank.nix"
+    ] ++ hm-config;
+  };
 }
 
