@@ -48,6 +48,7 @@ in
     modules = [
       sops-nix.homeManagerModules.sops
       "${self}/modules/home-conf-base.nix"
+      "${self}/modules/home-disable-gtk2-conf.nix"
       "${self}/modules/home-alacritty.nix"
       "${self}/modules/home-nvim.nix"
       "${self}/modules/home-zsh.nix"

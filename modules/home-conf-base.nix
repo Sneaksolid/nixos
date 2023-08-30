@@ -26,13 +26,6 @@ in
       slack
     ];
 
-    pointerCursor = {
-      name = "Adwaita";
-      package = pkgs.gnome.adwaita-icon-theme;
-      size = 24;
-      gtk.enable = true;
-    };
-
     sessionVariables = {
       EDITOR = "vim";
       PATH = "$PATH:$HOME/go/bin:$HOME/.local/bin:$HOME/.config/hypr/scripts:/opt/flutter/bin";

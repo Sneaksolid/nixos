@@ -13,6 +13,7 @@
       "sys"
       "audio"
       "docker"
+      "networkmanager"
     ];
   };
 }
