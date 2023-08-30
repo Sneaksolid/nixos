@@ -4,6 +4,7 @@
 
   home.packages = with pkgs; [
     wl-clipboard
+    protonup-qt
   ];
 
   programs.plasma = {
