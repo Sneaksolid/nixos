@@ -57,5 +57,7 @@
     go-migrate
     python39
     go-task
+    go-mockery
+    mockgen
   ];
 }
