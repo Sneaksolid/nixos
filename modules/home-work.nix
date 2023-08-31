@@ -42,6 +42,7 @@
   home.packages = with pkgs; [
     openfortivpn
     awscli2
+    jetbrains.datagrip
 
     nodePackages.aws-cdk
     nodePackages.cdk8s-cli
