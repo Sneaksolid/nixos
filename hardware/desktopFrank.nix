@@ -23,7 +23,7 @@
       fsType = "vfat";
     };
 
-  fileSystems."/mnt/DATA" = 
+  fileSystems."/mnt/DATA" =
     {
       device = "/dev/disk/by-uuid/948378ae-80ea-4a9e-8f90-fe747a539f35";
       fsType = "ext4";

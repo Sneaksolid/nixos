@@ -19,6 +19,9 @@
 
   networking.networkmanager.enable = true;
 
+  # fortisslvpn fixes
+  environment.etc."ppp/options".text = "ipcp-accept-remote";
+
   ## default packages
   ## ensure vim is installed in case
   ## we need to edit something
