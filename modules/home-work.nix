@@ -58,6 +58,5 @@
     go-migrate
     python39
     go-task
-    gopls
   ];
 }
