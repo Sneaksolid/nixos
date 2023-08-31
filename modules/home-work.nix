@@ -40,7 +40,6 @@
   };
 
   home.packages = with pkgs; [
-    go
     awscli2
 
     nodePackages.aws-cdk

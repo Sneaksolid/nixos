@@ -14,7 +14,9 @@
     nixd
     gcc
     nodejs_18
+    go
     gopls
+    golangci-lint
     golangci-lint-langserver
 
     nodePackages.typescript-language-server
