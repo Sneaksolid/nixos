@@ -18,8 +18,6 @@
   };
 
   networking.networkmanager.enable = true;
-
-  # fortisslvpn fixes
   environment.etc."ppp/options".text = "ipcp-accept-remote";
 
   ## default packages

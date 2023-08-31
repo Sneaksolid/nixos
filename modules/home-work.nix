@@ -40,6 +40,7 @@
   };
 
   home.packages = with pkgs; [
+    openfortivpn
     awscli2
 
     nodePackages.aws-cdk
