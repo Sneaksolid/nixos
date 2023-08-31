@@ -20,6 +20,7 @@ in
       btop
       sops
       curl
+      tmux
 
       # desktop apps
       spotify
