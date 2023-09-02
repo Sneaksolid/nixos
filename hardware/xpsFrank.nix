@@ -32,6 +32,10 @@
     size = 64 * 1024;
   }];
 
+  boot.resumeDevice = "/dev/disk/by-uuid/687c5d8f-c7d3-4eaf-b00f-2a9dc98533c5";
+  boot.kernelParams = ["resume_offset=96319488"];
+
+
   hardware.opengl = {
     enable = true;
     extraPackages = with pkgs; [
@@ -70,6 +74,19 @@
   };
   services.blueman.enable = true;
   services.fwupd.enable = true;
+
+  services.logind = {
+    powerKey = "suspend";
+    powerKeyLongPress = "poweroff";
+    lidSwitch = "hybrid-sleep";
+    suspendKey = "hybrid-sleep";
+    extraConfig = ''
+      SuspendMode=suspend
+      SuspendState=disk
+      HibernateMode=suspend
+      HibernateState=disk
+    '';
+  };
 
   environment.etc = {
     "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
