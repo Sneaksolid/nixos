@@ -33,7 +33,7 @@
   }];
 
   boot.resumeDevice = "/dev/disk/by-uuid/687c5d8f-c7d3-4eaf-b00f-2a9dc98533c5";
-  boot.kernelParams = ["resume_offset=96319488"];
+  boot.kernelParams = [ "resume_offset=96319488" ];
 
 
   hardware.opengl = {

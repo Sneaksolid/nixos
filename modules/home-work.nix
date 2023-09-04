@@ -27,15 +27,21 @@
     };
 
     kube_config_prd = {
-	format = "binary";
-	sopsFile = "${self}/secrets/kube_config_prd";
-	path = "${homeDirectory}/.kube/config_prd";
+      format = "binary";
+      sopsFile = "${self}/secrets/kube_config_prd";
+      path = "${homeDirectory}/.kube/config_prd";
     };
 
     kube_config_stg = {
-	format = "binary";
-	sopsFile = "${self}/secrets/kube_config_stg";
-	path = "${homeDirectory}/.kube/config_stg";
+      format = "binary";
+      sopsFile = "${self}/secrets/kube_config_stg";
+      path = "${homeDirectory}/.kube/config_stg";
+    };
+
+    kube_config_uat = {
+      format = "binary";
+      sopsFile = "${self}/secrets/kube_config_uat";
+      path = "${homeDirectory}/.kube/config_uat";
     };
   };
 
@@ -51,13 +57,18 @@
     };
 
     kube_switch_prd = {
-	source = "${self}/scripts/switch_to_prd.sh";
-	target = "${homeDirectory}/.kube/switch_to_prd.sh";
+      source = "${self}/scripts/switch_to_prd.sh";
+      target = "${homeDirectory}/.kube/switch_to_prd.sh";
     };
 
     kube_switch_stg = {
-	source = "${self}/scripts/switch_to_stg.sh";
-	target = "${homeDirectory}/.kube/switch_to_stg.sh";
+      source = "${self}/scripts/switch_to_stg.sh";
+      target = "${homeDirectory}/.kube/switch_to_stg.sh";
+    };
+
+    kube_switch_uat = {
+      source = "${self}/scripts/switch_to_uat.sh";
+      target = "${homeDirectory}/.kube/switch_to_uat.sh";
     };
   };
 
@@ -86,9 +97,10 @@
   ];
 
   programs.zsh = {
-	shellAliases = {
-	  kstg = "source ~/.kube/switch_to_stg.sh";
-	  kprd = "source ~/.kube/switch_to_prd.sh";
-	};
+    shellAliases = {
+      kuat = "source ~/.kube/switch_to_uat.sh";
+      kstg = "source ~/.kube/switch_to_stg.sh";
+      kprd = "source ~/.kube/switch_to_prd.sh";
+    };
   };
 }
