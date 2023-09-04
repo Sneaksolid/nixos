@@ -12,7 +12,6 @@
   home.packages = with pkgs; [
     gcc
     nixd
-    gcc
     nodejs_18
     go
     gopls
