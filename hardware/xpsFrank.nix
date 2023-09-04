@@ -76,8 +76,7 @@
   services.fwupd.enable = true;
 
   services.logind = {
-    powerKey = "suspend";
-    powerKeyLongPress = "poweroff";
+    powerKey = "poweroff";
     lidSwitch = "hybrid-sleep";
     suspendKey = "hybrid-sleep";
     extraConfig = ''
