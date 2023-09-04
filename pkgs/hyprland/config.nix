@@ -151,7 +151,7 @@
 
       " , XF86MonBrightnessUp, exec, brightnessctl -c backlight set +5%"
       " , XF86MonBrightnessDown, exec, brightnessctl -c backlight set 5%-"
-      " , switch:Lid Switch, exec, $lockCmd"
+      " , switch:Lid Switch, exec, sleep 1 && $lockCmd"
     ];
   };
 }

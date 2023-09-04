@@ -75,18 +75,6 @@
   services.blueman.enable = true;
   services.fwupd.enable = true;
 
-  services.logind = {
-    powerKey = "poweroff";
-    lidSwitch = "hybrid-sleep";
-    suspendKey = "hybrid-sleep";
-    extraConfig = ''
-      SuspendMode=suspend
-      SuspendState=disk
-      HibernateMode=suspend
-      HibernateState=disk
-    '';
-  };
-
   environment.etc = {
     "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
       		bluez_monitor.properties = {

@@ -24,6 +24,7 @@ in
     inherit system;
     modules = [
       "${self}/modules/base.nix"
+      "${self}/modules/suspend-then-hibernate.nix"
       "${self}/modules/users.nix"
       "${self}/hardware/xpsFrank.nix"
     ] ++ hm-config;
