@@ -25,6 +25,18 @@
       sopsFile = "${self}/ssh/id_rsa";
       path = "${homeDirectory}/.ssh/id_rsa";
     };
+
+    kube_config_prd = {
+	format = "binary";
+	sopsFile = "${self}/secrets/kube_config_prd";
+	path = "${homeDirectory}/.kube/config_prd";
+    };
+
+    kube_config_stg = {
+	format = "binary";
+	sopsFile = "${self}/secrets/kube_config_stg";
+	path = "${homeDirectory}/.kube/config_stg";
+    };
   };
 
   home.file = {
@@ -36,6 +48,16 @@
     id_rsa_public = {
       source = "${self}/ssh/id_rsa.pub";
       target = "${homeDirectory}/.ssh/id_rsa.pub";
+    };
+
+    kube_switch_prd = {
+	source = "${self}/scripts/switch_to_prd.sh";
+	target = "${homeDirectory}/.kube/switch_to_prd.sh";
+    };
+
+    kube_switch_stg = {
+	source = "${self}/scripts/switch_to_stg.sh";
+	target = "${homeDirectory}/.kube/switch_to_stg.sh";
     };
   };
 
@@ -62,4 +84,11 @@
     go-mockery
     mockgen
   ];
+
+  programs.zsh = {
+	shellAliases = {
+	  kstg = "source ~/.kube/switch_to_stg.sh";
+	  kprd = "source ~/.kube/switch_to_prd.sh";
+	};
+  };
 }
