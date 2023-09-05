@@ -48,8 +48,13 @@
     enable = true;
     enableOnBoot = false;
     autoPrune.enable = true;
+    logDriver = "local";
     daemon.settings = {
       insecure-registries = [ "k3d-local:5111" ];
+      log-opts = {
+        "max-size" = "10m";
+        "max-file" = "3";
+      };
     };
   };
 
