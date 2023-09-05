@@ -52,7 +52,7 @@
     daemon.settings = {
       insecure-registries = [ "k3d-local:5111" ];
       log-opts = {
-        "max-size" = "10m";
+        "max-size" = "100m";
         "max-file" = "3";
       };
     };
