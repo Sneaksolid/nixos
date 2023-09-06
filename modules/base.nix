@@ -74,8 +74,10 @@
   };
 
   networking.extraHosts = ''
-      	127.0.0.1 api.local.trever.io	
-    	127.0.0.1 k3d-local
+          	127.0.0.1 api.local.trever.io	
+        	127.0.0.1 k3d-local
+    	127.0.0.1 redis
+    	127.0.0.1 kafka
   '';
 }
 

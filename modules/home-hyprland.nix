@@ -52,7 +52,7 @@
   };
 
   home.sessionVariables = {
-    _JAVA_AWT_WM_NOREPARENTING="1";
+    _JAVA_AWT_WM_NOREPARENTING = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
     WLR_RENDERER_ALLOW_SOFTWARE = "1";
   };

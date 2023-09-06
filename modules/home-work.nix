@@ -94,6 +94,7 @@
     go-task
     go-mockery
     mockgen
+    redis
   ];
 
   programs.zsh = {
