@@ -47,7 +47,7 @@
       multisample_edges = "false";
 
       blur = {
-        enabled = "yes";
+        enabled = "false";
         size = 10;
         passes = 1;
         new_optimizations = "true";
