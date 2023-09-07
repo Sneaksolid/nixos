@@ -6,7 +6,6 @@
     wl-clipboard
     networkmanagerapplet
     waybar
-    gnome.gnome-keyring
     swaylock
     brightnessctl
     playerctl
