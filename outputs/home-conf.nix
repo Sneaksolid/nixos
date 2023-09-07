@@ -56,7 +56,6 @@ in
       sops-nix.homeManagerModules.sops
       plasma-manager.homeManagerModules.plasma-manager
       "${self}/modules/home-conf-base.nix"
-      "${self}/modules/home-disable-gtk2-conf.nix"
       "${self}/modules/home-plasma-config.nix"
       "${self}/modules/home-alacritty.nix"
       "${self}/modules/home-nvim.nix"
