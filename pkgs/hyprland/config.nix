@@ -134,6 +134,9 @@
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
 
+      # Move workspace to another monitor
+      "$mainMod SHIFT, W, exec, $HOME/.config/hypr/scripts/moveworkspace.sh"
+
       # Scroll through existing workspaces with mainMod + scroll
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"

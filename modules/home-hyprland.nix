@@ -49,6 +49,12 @@
       source = "${self}/pkgs/swaylock";
       target = ".config/swaylock";
     };
+
+    hypr_scripts = {
+      recursive = true;
+      source = "${self}/pkgs/hyprland/scripts";
+      target = ".config/hypr/scripts";
+    };
   };
 
   home.sessionVariables = {
