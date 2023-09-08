@@ -79,5 +79,15 @@
     	127.0.0.1 redis
     	127.0.0.1 kafka
   '';
+
+  xdg = {
+    portal = {
+      enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-wlr
+        xdg-desktop-portal-gtk
+      ];
+    };
+  };
 }
 
