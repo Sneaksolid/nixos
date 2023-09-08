@@ -11,6 +11,8 @@ let
   nerfontsOverlay = nfPackages.nerdfonts;
 in
 {
+
+  # slack url = https://app.slack.com/client/T7H8H6Y3B/C7HRB3W4C
   home = {
     inherit username homeDirectory;
     stateVersion = "23.05";
