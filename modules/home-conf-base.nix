@@ -1,15 +1,14 @@
 { self, pkgs, system, username, homeDirectory, ... }:
 
 let
-  NFandSlackPackages = import
+  nfPackages = import
     (builtins.fetchTarball {
       url = "https://github.com/NixOS/nixpkgs/archive/8cad3dbe48029cb9def5cdb2409a6c80d3acfe2e.tar.gz";
       sha256 = "181ad740l2fy6phsz45jlvhnshhz4nvvl900vm1kvn9bhlc1ih95";
     })
     { inherit system; config.allowUnfree = true; };
 
-  nerfontsOverlay = NFandSlackPackages.nerdfonts;
-  slackOverlay = NFandSlackPackages.slack;
+  nerfontsOverlay = nfPackages.nerdfonts;
 in
 {
   home = {
@@ -25,11 +24,9 @@ in
 
       # desktop apps
       spotify
-      slackOverlay
       firefox
       bitwarden
       telegram-desktop
-      discord
       teams
     ];
 
