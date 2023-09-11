@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    tela-circle-icon-theme
     (makeDesktopItem {
       name = "discord";
       exec = "${pkgs.discord}/bin/discord --use-gl=desktop";

@@ -12,7 +12,7 @@
   };
 
   home.packages = with pkgs; [
-    exa
+    eza
     ripgrep
     fd
     procs
@@ -31,7 +31,7 @@
 
     shellAliases = {
       cat = "bat";
-      ls = "exa";
+      ls = "eza";
       grep = "rg";
       find = "fd";
       ps = "procs";

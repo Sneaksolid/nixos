@@ -37,6 +37,7 @@ in
       "${self}/modules/home-alacritty.nix"
       "${self}/modules/home-nvim.nix"
       "${self}/modules/home-zsh.nix"
+      "${self}/modules/home-slack.nix"
       "${self}/modules/home-work.nix"
     ];
   };
