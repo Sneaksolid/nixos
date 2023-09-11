@@ -13,6 +13,8 @@
     blueman
     pamixer
     flat-remix-icon-theme
+    xfce.thunar
+    evince
   ];
 
   xdg.mimeApps = {
