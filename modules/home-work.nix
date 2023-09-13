@@ -76,6 +76,7 @@
     openfortivpn
     awscli2
     jetbrains.datagrip
+    postman
 
     nodePackages.aws-cdk
     nodePackages.cdk8s-cli
