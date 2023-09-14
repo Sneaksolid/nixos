@@ -14,6 +14,7 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
+  boot.swraid.enable = false;
   fileSystems."/" =
     {
       device = "/dev/disk/by-uuid/687c5d8f-c7d3-4eaf-b00f-2a9dc98533c5";
