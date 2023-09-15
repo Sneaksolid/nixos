@@ -36,6 +36,7 @@ in
       "${self}/modules/base.nix"
       "${self}/modules/users.nix"
       "${self}/modules/steam.nix"
+      "${self}/modules/8bitdo.nix"
       "${self}/hardware/desktopFrank.nix"
     ] ++ hm-config;
   };
