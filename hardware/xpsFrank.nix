@@ -54,7 +54,7 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.enable = lib.mkDefault true;
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.intel.updateMicrocode = true;
 
   networking.hostName = "xpsFrank";
   programs.hyprland.enable = true;
