@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = [pkgs.xboxdrv];
+  environment.systemPackages = [ pkgs.xboxdrv ];
 
   # Udev rules to start or stop systemd service when controller is connected or disconnected
   services.udev.extraRules = ''
