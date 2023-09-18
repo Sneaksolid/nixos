@@ -13,6 +13,11 @@
       "hyprctl setcursor Adwaita 24"
     ];
 
+    monitor = [
+      "eDP-1,preferred,auto,1.2"
+      ",disable"
+    ];
+
     input = {
       kb_layout = "de";
       kb_variant = "";
