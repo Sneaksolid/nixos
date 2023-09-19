@@ -84,9 +84,10 @@ in
           repeat_rate = "50";
         };
 
-        "2:1:PS/2_Generic_Mouse" = {
+        "type:touchpad" = {
           accel_profile = "flat";
           pointer_accel = "0.2";
+          tap = "enabled";
         };
       };
 
@@ -113,6 +114,12 @@ in
       keybindings = mkOptionDefault {
         "${modifier}+q" = "kill";
         "${modifier}+Shift+x" = "exec $lockCmd";
+        "XF86AudioRaiseVolume" = "exec pamixer -ui 5";
+        "XF86AudioLowerVolume" = "exec pamixer -ud 5";
+        "XF86AudioMute" = "exec pamixer -t";
+
+        "XF86MonBrightnessUp" = "exec brightnessctl set +5%";
+        "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
       };
     };
   };
