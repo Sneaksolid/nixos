@@ -85,7 +85,7 @@ in
         };
 
         "type:touchpad" = {
-          accel_profile = "flat";
+          accel_profile = "adaptive";
           pointer_accel = "0.2";
           tap = "enabled";
         };
