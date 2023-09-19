@@ -14,8 +14,9 @@
     ];
 
     monitor = [
-      "eDP-1,preferred,auto,1.2"
-      ",disable"
+      "eDP-1,preferred,0x0,1.2"
+      "desc:Lenovo Group Limited P27h-20 V906BZ70,preferred,auto,1.0"
+      "desc:Lenovo Group Limited LEN P27h-10 0x385A5938,preferred,auto,1.0"
     ];
 
     input = {
