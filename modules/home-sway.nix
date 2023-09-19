@@ -49,6 +49,11 @@ in
   wayland.windowManager.sway = {
     enable = true;
 
+    extraConfig = ''
+      set $lockCmd 'swaylock -C ${self}/pkgs/swaylock/config -i ${self}/pkgs/sway/wallpaper.jpg'
+      bindswitch --reload --locked lid:on exec $lockCmd
+    '';
+
     config = rec {
       inherit modifier;
       startup = [
@@ -106,7 +111,8 @@ in
       ];
 
       keybindings = mkOptionDefault {
-        "${modifier}+Q" = "kill";
+        "${modifier}+q" = "kill";
+        "${modifier}+Shift+x" = "exec $lockCmd";
       };
     };
   };

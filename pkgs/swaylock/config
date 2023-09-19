@@ -4,7 +4,7 @@
 # daemonize
 #indicator-caps-lock
 # datestr=%A
-image=$HOME/.config/hypr/wallpaper.jpg
+# image=$HOME/.config/hypr/wallpaper.jpg
 #screenshots
 #effect-blur=7x5
 #scaling=fill

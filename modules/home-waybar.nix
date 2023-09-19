@@ -5,6 +5,11 @@
     waybar
   ];
 
+  services.mpd = {
+    enable = true;
+    musicDirectory = "$HOME/Music";
+  };
+
   home.file = {
     waybar_conf = {
       recursive = true;
