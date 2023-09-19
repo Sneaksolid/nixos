@@ -37,17 +37,9 @@
       ps = "procs";
     };
     initExtra = ''
-          			hostname=$(hostname)
-                              if [[ "$hostname" = "xpsFrank" ]]; then
-                  
-                              	eval "$(zoxide init zsh)"
-                              	alias cd=z
-                              	if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-                              	  exec Hyprland
-                              	fi
-                              fi
-
-      			source ~/.zshrc_private
-            		'';
+      eval "$(zoxide init zsh)"
+      alias cd=z
+      source ~/.zshrc_private
+    '';
   };
 }

@@ -1,11 +1,11 @@
 {
     "height": 37, // Waybar height (to be removed for auto height)
-    "modules-left": ["hyprland/workspaces", "custom/media"],
+    "modules-left": ["sway/workspaces", "custom/media"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "backlight", "cpu", "memory", "battery", "tray"],
 
     // Modules configuration
-     "hyprland/workspaces": {
+     "sway/workspaces": {
          "disable-scroll": true,
          "format": "{name}",
      },

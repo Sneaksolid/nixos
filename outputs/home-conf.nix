@@ -33,7 +33,10 @@ in
     modules = [
       sops-nix.homeManagerModules.sops
       "${self}/modules/home-conf-base.nix"
-      "${self}/modules/home-hyprland.nix"
+      "${self}/modules/home-sway.nix"
+      "${self}/modules/home-waybar.nix"
+      "${self}/modules/home-mako.nix"
+      "${self}/modules/home-wofi.nix"
       "${self}/modules/home-alacritty.nix"
       "${self}/modules/home-nvim.nix"
       "${self}/modules/home-zsh.nix"

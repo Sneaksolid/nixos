@@ -11,4 +11,6 @@
     import "${self}/pkgs/alacritty/config.nix"
       { inherit pkgs; }
   );
+
+  wayland.windowManager.sway.config.terminal = "alacritty";
 }

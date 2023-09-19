@@ -28,7 +28,7 @@
       fsType = "vfat";
     };
 
-  fileSystems."/tmp" = 
+  fileSystems."/tmp" =
     {
       device = "tmpfs";
       fsType = "tmpfs";
@@ -41,7 +41,9 @@
   }];
 
   boot.resumeDevice = "/dev/disk/by-uuid/687c5d8f-c7d3-4eaf-b00f-2a9dc98533c5";
-  boot.kernelParams = [ "resume_offset=96319488" ];
+  boot.kernelParams = [
+    "resume_offset=96319488"
+  ];
 
 
   hardware.opengl = {
@@ -64,9 +66,10 @@
   hardware.cpu.intel.updateMicrocode = true;
 
   networking.hostName = "xpsFrank";
-  programs.hyprland.enable = true;
+  # programs.hyprland.enable = true;
 
   security.rtkit.enable = true;
+  security.polkit.enable = true;
   security.pam.services.swaylock = { };
   hardware.bluetooth.enable = true;
 
