@@ -28,6 +28,13 @@
       fsType = "vfat";
     };
 
+  fileSystems."/tmp" = 
+    {
+      device = "tmpfs";
+      fsType = "tmpfs";
+      options = [ "size=12G" "rw" "nodev" "nosuid" ];
+    };
+
   swapDevices = [{
     device = "/var/lib/swapfile";
     size = 64 * 1024;
