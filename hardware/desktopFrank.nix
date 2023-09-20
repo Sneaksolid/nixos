@@ -24,6 +24,13 @@
       fsType = "vfat";
     };
 
+  fileSystems."/tmp" =
+    {
+      device = "tmpfs";
+      fsType = "tmpfs";
+      options = [ "size=12G" "rw" "nodev" "nosuid" ];
+    };
+
   fileSystems."/mnt/DATA" =
     {
       device = "/dev/disk/by-uuid/948378ae-80ea-4a9e-8f90-fe747a539f35";
@@ -53,6 +60,8 @@
   networking.hostName = "desktopFrank";
 
   services.xserver.videoDrivers = [ "nvidia" ];
+
+  powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
 
   hardware.nvidia = {
     modesetting.enable = true;
