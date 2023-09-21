@@ -10,6 +10,7 @@
   };
 
   home.packages = with pkgs; [
+    tree-sitter
     gcc
     nixd
     nodejs_18
