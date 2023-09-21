@@ -29,7 +29,6 @@ in
       firefox
       bitwarden
       telegram-desktop
-      teams
     ];
 
     sessionVariables = {
