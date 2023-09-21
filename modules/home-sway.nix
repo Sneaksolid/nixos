@@ -123,4 +123,13 @@ in
       };
     };
   };
+
+  programs.zsh.initExtra = ''
+    hostname=$(hostname)
+    if [[ "$hostname" = "xpsFrank" ]]; then
+        if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+        	exec sway
+        fi
+    fi
+  '';
 }
