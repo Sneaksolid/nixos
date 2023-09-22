@@ -77,7 +77,6 @@
     awscli2
     jetbrains.datagrip
     postman
-    teams
 
     nodePackages.aws-cdk
     nodePackages.cdk8s-cli

@@ -41,6 +41,7 @@ in
       "${self}/modules/home-nvim.nix"
       "${self}/modules/home-zsh.nix"
       "${self}/modules/home-slack.nix"
+      "${self}/modules/home-teams.nix"
       "${self}/modules/home-work.nix"
     ];
   };
@@ -66,6 +67,7 @@ in
       "${self}/modules/home-zsh.nix"
       "${self}/modules/home-discord.nix"
       "${self}/modules/home-slack.nix"
+      "${self}/modules/home-teams.nix"
       "${self}/modules/home-work.nix"
     ];
   };
