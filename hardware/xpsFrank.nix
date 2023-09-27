@@ -86,6 +86,11 @@
     */
   };
   services.thermald.enable = true;
+
+  systemd.tmpfiles.rules = [
+    "w /sys/power/image_size - - - - 25769803776"
+  ];
+
   services.blueman.enable = true;
   services.fwupd.enable = true;
 
