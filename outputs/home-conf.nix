@@ -68,6 +68,7 @@ in
       "${self}/modules/home-discord.nix"
       "${self}/modules/home-slack.nix"
       "${self}/modules/home-teams.nix"
+      "${self}/modules/home-steam.nix"
       "${self}/modules/home-work.nix"
     ];
   };
