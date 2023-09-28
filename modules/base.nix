@@ -89,5 +89,9 @@
       ];
     };
   };
+
+
+  # install linux firmware
+  hardware.enableAllFirmware = true;
 }
 
