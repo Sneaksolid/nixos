@@ -6,7 +6,7 @@
   ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "amdgpu" ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
@@ -59,16 +59,9 @@
 
   networking.hostName = "desktopFrank";
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    open = false;
-    nvidiaSettings = true;
-  };
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
