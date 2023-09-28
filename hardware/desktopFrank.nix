@@ -9,6 +9,9 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = [
+	"amdgpu.ppfeaturemask=0xfff7ffff"
+  ];
 
   boot.swraid.enable = false;
   fileSystems."/" =
