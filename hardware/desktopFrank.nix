@@ -62,8 +62,6 @@
 
   networking.hostName = "desktopFrank";
 
-  services.xserver.videoDrivers = [ "amdgpu" ];
-
   powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
 
   # Select internationalisation properties.
