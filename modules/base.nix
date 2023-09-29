@@ -18,9 +18,6 @@
   };
 
   networking.networkmanager.enable = true;
-  networking.networkmanager.appendNameservers = [
-    "192.168.50.120"
-  ];
   environment.etc."ppp/options".text = ''
     ipcp-accept-remote
     plugin ${pkgs.ppp}/lib/pppd/2.5.0/pppoe.so
