@@ -18,7 +18,13 @@
   };
 
   networking.networkmanager.enable = true;
-  environment.etc."ppp/options".text = "ipcp-accept-remote";
+  networking.networkmanager.appendNameservers = [
+    "192.168.50.120"
+  ];
+  environment.etc."ppp/options".text = ''
+    ipcp-accept-remote
+    plugin ${pkgs.ppp}/lib/pppd/2.5.0/pppoe.so
+  '';
 
   ## default packages
   ## ensure vim is installed in case
@@ -74,8 +80,8 @@
   };
 
   networking.extraHosts = ''
-          	127.0.0.1 api.local.trever.io	
-        	127.0.0.1 k3d-local
+        127.0.0.1 api.local.trever.io	
+        127.0.0.1 k3d-local
     	127.0.0.1 redis
     	127.0.0.1 kafka
   '';

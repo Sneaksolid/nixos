@@ -5,7 +5,7 @@
     description = "sets the amdgpu power profile to 3D_FULL_SCREEN";
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
-	type = "oneshot";
+      type = "oneshot";
     };
     script = ''
       #!/bin/sh

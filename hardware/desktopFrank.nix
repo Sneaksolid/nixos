@@ -10,8 +10,12 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
   boot.kernelParams = [
-	"amdgpu.ppfeaturemask=0xfff7ffff"
+    "amdgpu.ppfeaturemask=0xfff7ffff"
   ];
+
+  # disable ipv6
+  networking.enableIPv6 = false;
+
 
   boot.swraid.enable = false;
   fileSystems."/" =
