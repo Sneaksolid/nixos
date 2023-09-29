@@ -87,6 +87,7 @@
     kubectl
     kubectx
     k3d
+    k9s
 
     netcat-openbsd
     jq

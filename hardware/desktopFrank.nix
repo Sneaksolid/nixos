@@ -116,4 +116,6 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+  # install linux firmware
+  hardware.enableAllFirmware = true;
 }
