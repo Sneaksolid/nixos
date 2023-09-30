@@ -90,7 +90,11 @@
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
   services.xserver.displayManager.defaultSession = "plasmawayland";
-  programs.dconf.enable = true;
+
+  programs =  {
+    dconf.enable = true;
+    gamemode.enable = true;
+  };
 
   # Configure keymap in X11
   services.xserver = {
@@ -118,9 +122,4 @@
   nixpkgs.config.allowUnfree = true;
   # install linux firmware
   hardware.enableAllFirmware = true;
-
-  environment.systemPackages = with pkgs; [
-    vim
-    gamemode
-  ];
 }
