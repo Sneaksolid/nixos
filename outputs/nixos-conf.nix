@@ -35,6 +35,7 @@ in
     modules = [
       "${self}/modules/base.nix"
       "${self}/modules/users.nix"
+      "${self}/modules/users-desktop.nix"
       "${self}/modules/steam.nix"
       "${self}/modules/8bitdo.nix"
       "${self}/modules/amdgpu-powerstate.nix"
