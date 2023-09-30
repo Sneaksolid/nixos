@@ -100,7 +100,14 @@
 
   programs =  {
     dconf.enable = true;
-    gamemode.enable = true;
+    gamemode = {
+      enable = true;
+      settings = {
+        general = {
+          renice = 10;
+        };
+      };
+    };
   };
 
   # Configure keymap in X11
