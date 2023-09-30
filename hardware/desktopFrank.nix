@@ -45,6 +45,13 @@
       options = [ "defaults" "noatime" "commit=60" ];
     };
 
+  fileSystems."/mnt/NVME" = 
+    {
+      device = "/dev/disk/by-uuid/ee845fbe-c1e2-4e9b-9659-8b1d1449deb9";
+      fsType = "ext4";
+      options = [ "defaults" "noatime" "commit=60" ];
+    };
+
   swapDevices =
     [{ device = "/dev/disk/by-uuid/1f5805dc-b151-4a65-ad60-4d77131c0d69"; }];
 
