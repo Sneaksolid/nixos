@@ -105,6 +105,7 @@
       kstg = "source ~/.kube/switch_to_stg.sh";
       kprd = "source ~/.kube/switch_to_prd.sh";
       k = "kubectl";
+      ks = "k9s";
     };
   };
 }
