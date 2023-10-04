@@ -37,5 +37,5 @@ stdenv.mkDerivation rec {
     wrapQtAppsHook
   ];
 
-  buildPhase = "make";
+  buildPhase = "make -j $NIX_BUILD_CORES";
 }

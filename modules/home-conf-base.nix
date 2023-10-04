@@ -9,8 +9,6 @@ let
     { inherit system; config.allowUnfree = true; };
 
   nerfontsOverlay = nfPackages.nerdfonts;
-
-  corectrl = pkgs.libsForQt5.callPackage "${self}/pkgs/corectrl/default.nix" { };
 in
 {
 
@@ -31,7 +29,6 @@ in
       firefox
       bitwarden
       telegram-desktop
-      corectrl
     ];
 
     sessionVariables = {
