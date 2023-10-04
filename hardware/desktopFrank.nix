@@ -45,7 +45,7 @@
       options = [ "defaults" "noatime" "commit=60" ];
     };
 
-  fileSystems."/mnt/NVME" = 
+  fileSystems."/mnt/NVME" =
     {
       device = "/dev/disk/by-uuid/ee845fbe-c1e2-4e9b-9659-8b1d1449deb9";
       fsType = "ext4";
@@ -98,7 +98,7 @@
   services.xserver.desktopManager.plasma5.enable = true;
   services.xserver.displayManager.defaultSession = "plasmawayland";
 
-  programs =  {
+  programs = {
     dconf.enable = true;
     gamemode = {
       enable = true;

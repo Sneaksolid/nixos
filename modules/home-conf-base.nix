@@ -10,7 +10,7 @@ let
 
   nerfontsOverlay = nfPackages.nerdfonts;
 
-  corectrl = pkgs.libsForQt5.callPackage "${self}/pkgs/corectrl/default.nix" {};
+  corectrl = pkgs.libsForQt5.callPackage "${self}/pkgs/corectrl/default.nix" { };
 in
 {
 

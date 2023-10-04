@@ -1,4 +1,15 @@
-{ stdenv, qtbase, qtcharts, qttools, quazip, botan2, wrapQtAppsHook, gcc, cmake, pkg-config, polkit }:
+{ stdenv
+, qtbase
+, qtcharts
+, qttools
+, quazip
+, botan2
+, wrapQtAppsHook
+, gcc
+, cmake
+, pkg-config
+, polkit
+}:
 
 stdenv.mkDerivation rec {
   pname = "corectrl";
@@ -10,7 +21,7 @@ stdenv.mkDerivation rec {
     rev = "dd0b8ce1e43c30e014cbaf0590422132acc0ce31";
   };
 
-  buildInputs = [ 
+  buildInputs = [
     qtbase
     qtcharts
     qttools
