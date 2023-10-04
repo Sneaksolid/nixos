@@ -2,8 +2,6 @@ export OLD_PS1=$PS1
 export PS1="(STG) $PS1"
 export KUBECONFIG=$HOME/.kube/config_stg
 
-kubectl config set-context trever-stg > /dev/null
-
 function revert() {
     export PS1=$OLD_PS1
     unset KUBECONFIG
