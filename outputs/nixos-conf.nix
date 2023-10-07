@@ -12,6 +12,7 @@ in
 {
   nixos-vm = nixpkgs.lib.nixosSystem {
     inherit system;
+
     modules = [
       "${self}/modules/base.nix"
       "${self}/modules/users.nix"
@@ -32,6 +33,7 @@ in
 
   desktopFrank = nixpkgs.lib.nixosSystem {
     inherit system;
+
     modules = [
       "${self}/modules/base.nix"
       "${self}/modules/users.nix"

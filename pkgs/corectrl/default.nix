@@ -8,6 +8,7 @@
 , gcc
 , cmake
 , pkg-config
+, dbus
 , polkit
 }:
 
@@ -27,7 +28,6 @@ stdenv.mkDerivation rec {
     qttools
     quazip
     botan2
-    polkit
   ];
 
   nativeBuildInputs = [
@@ -35,7 +35,15 @@ stdenv.mkDerivation rec {
     cmake
     pkg-config
     wrapQtAppsHook
+    polkit
+    dbus
   ];
 
   buildPhase = "make -j $NIX_BUILD_CORES";
+
+  cmakeFlags = [
+    "-DINSTALL_DBUS_FILES_IN_PREFIX=ON"
+  ];
+
+  PKG_CONFIG_POLKIT_GOBJECT_1_POLICYDIR = "${placeholder "out"}/share/polkit-1/actions";
 }

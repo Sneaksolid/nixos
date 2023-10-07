@@ -25,6 +25,12 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
+      nixpkgs.overlays = [
+        (final: prev: {
+          corecrtl = pkgs.libsForQt5.callPackage "${self}/pkgs/corectrl/default.nix" { };
+        })
+      ];
+
       devShells.${system}.default = (
         import "${self}/outputs/dev-shell.nix" {
           inherit self system nixpkgs;

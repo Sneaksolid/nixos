@@ -1,4 +1,7 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ self, config, lib, pkgs, modulesPath, ... }:
+
+
+#corectrl = pkgs.libsForQt5.callPackage "${self}/pkgs/corectrl/default.nix" {};
 
 {
   imports = [
@@ -136,4 +139,9 @@
   nixpkgs.config.allowUnfree = true;
   # install linux firmware
   hardware.enableAllFirmware = true;
+
+  environment.systemPackages = with pkgs; [
+    corectrl
+  ];
 }
+
