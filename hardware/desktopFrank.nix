@@ -139,21 +139,5 @@
   nixpkgs.config.allowUnfree = true;
   # install linux firmware
   hardware.enableAllFirmware = true;
-
-  environment.systemPackages = with pkgs; [
-    corectrl
-  ];
-
-  environment.etc."polkit-1/rules.d/90-corectrl.rules".text = ''
-    polkit.addRule(function(action, subject) {
-        if ((action.id == "org.corectrl.helper.init" ||
-             action.id == "org.corectrl.helperkiller.init") &&
-            subject.local == true &&
-            subject.active == true &&
-            subject.isInGroup("wheel")) {
-                return polkit.Result.YES;
-        }
-    });
-  '';
 }
 

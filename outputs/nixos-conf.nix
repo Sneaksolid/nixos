@@ -39,6 +39,7 @@ in
       "${self}/modules/users.nix"
       "${self}/modules/steam.nix"
       "${self}/modules/8bitdo.nix"
+      "${self}/modules/amdgpu-powerstate.nix"
       "${self}/hardware/desktopFrank.nix"
     ] ++ hm-config;
   };
