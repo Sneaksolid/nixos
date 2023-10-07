@@ -3,6 +3,14 @@
 {
   home.packages = with pkgs; [
     mangohud
-    steamtinkerlaunch
+    # for mods
+    transmission-qt
+
+    #STL deps
+    unzip
+    wget
+    xdotool
+    yad
+    xorg.xwininfo
   ];
 }
