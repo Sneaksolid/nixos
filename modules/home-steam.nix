@@ -12,5 +12,8 @@
     xdotool
     yad
     xorg.xwininfo
+
+    # extra launchers
+    heroic
   ];
 }
