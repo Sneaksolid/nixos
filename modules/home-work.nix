@@ -76,6 +76,7 @@
     openfortivpn
     awscli2
     jetbrains.datagrip
+    postgresql
     postman
 
     nodePackages.aws-cdk
