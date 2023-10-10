@@ -57,6 +57,10 @@ in
       };
       userName = "Mathias Kahr";
       userEmail = "m.kahr@trever.io";
+
+      extraConfig = {
+	rebase.instructionFormat = "[%an <%ae> @ %ar] %s";
+      };
     };
   };
 }
