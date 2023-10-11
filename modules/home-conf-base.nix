@@ -53,13 +53,13 @@ in
       enable = true;
       aliases = {
         co = "checkout";
-	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f ";
+        change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f ";
       };
       userName = "Mathias Kahr";
       userEmail = "m.kahr@trever.io";
 
       extraConfig = {
-	rebase.instructionFormat = "[%an <%ae> @ %ar] %s";
+        rebase.instructionFormat = "[%an <%ae> @ %ar] %s";
       };
     };
   };

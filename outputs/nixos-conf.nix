@@ -8,19 +8,16 @@ let
       home-manager.useUserPackages = true;
     }
   ];
+
+  sddmBackgroundPatch = final: prev: {
+    libsForQt5 = prev.libsForQt5.overrideScope' (qtFinal: qtPrev: {
+      plasma-workspace = qtPrev.plasma-workspace.overrideAttrs (old: {
+        patches = old.patches ++ [ "${self}/patches/sddm-background.patch" ];
+      });
+    });
+  };
 in
 {
-  nixos-vm = nixpkgs.lib.nixosSystem {
-    inherit system;
-
-    modules = [
-      "${self}/modules/base.nix"
-      "${self}/modules/users.nix"
-      "${self}/modules/nixos-vm.nix"
-      "${self}/hardware/nixos-vm.nix"
-    ] ++ hm-config;
-  };
-
   xpsFrank = nixpkgs.lib.nixosSystem {
     inherit system;
     modules = [
@@ -35,6 +32,7 @@ in
     inherit system;
 
     modules = [
+      ({ ... }: { nixpkgs.overlays = [ sddmBackgroundPatch ]; })
       "${self}/modules/base.nix"
       "${self}/modules/users.nix"
       "${self}/modules/steam.nix"

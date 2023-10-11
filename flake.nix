@@ -22,22 +22,34 @@
     }:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+
+      sddmBackgroundPatch = final: prev: {
+        plasma5Packages = prev.plasma5Packages.overrideScope' (qtFinal: qtPrev: {
+          plasma-workspace = qtPrev.plasma-workspace.overrideAttrs (old: {
+            patches = old.patches ++ [ "${self}/patches/sddm-background.patch" ];
+          });
+        });
+      };
+
+      # nixpkgs.overlays = [
+      # (final: prev: {
+      #   plasma5Packages = prev.plasma5Packages.overrideScope' (qtFinal: qtPrev: {
+      #      plasma-workspace = qtPrev.plasma-workspace.overrideAttrs (old: {
+      #        buildInputs = old.buildInputs ++ [ pkgs ];
+      #        patches = old.patches ++ [ "${self}/patches/sddm-background.patch" ];
+      #      });
+      #   });
+      # })
+      # ];
     in
     {
-      nixpkgs.overlays = [
-        (final: prev: {
-          corecrtl = pkgs.libsForQt5.callPackage "${self}/pkgs/corectrl/default.nix" { };
-        })
-      ];
-
       devShells.${system}.default = (
         import "${self}/outputs/dev-shell.nix" {
           inherit self system nixpkgs;
         }
       );
 
-      formatter.${system} = pkgs.nixpkgs-fmt;
+      formatter.${system} = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
 
       nixosConfigurations = (
         import "${self}/outputs/nixos-conf.nix" {

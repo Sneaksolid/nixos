@@ -139,5 +139,9 @@
   nixpkgs.config.allowUnfree = true;
   # install linux firmware
   hardware.enableAllFirmware = true;
+
+  environment.systemPackages = with pkgs; [
+    libsForQt5.plasma-workspace
+  ];
 }
 
