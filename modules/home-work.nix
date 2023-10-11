@@ -77,7 +77,7 @@
     awscli2
     jetbrains.datagrip
     postgresql
-    postman
+    insomnia
 
     nodePackages.aws-cdk
     nodePackages.cdk8s-cli
