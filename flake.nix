@@ -22,25 +22,6 @@
     }:
     let
       system = "x86_64-linux";
-
-      sddmBackgroundPatch = final: prev: {
-        plasma5Packages = prev.plasma5Packages.overrideScope' (qtFinal: qtPrev: {
-          plasma-workspace = qtPrev.plasma-workspace.overrideAttrs (old: {
-            patches = old.patches ++ [ "${self}/patches/sddm-background.patch" ];
-          });
-        });
-      };
-
-      # nixpkgs.overlays = [
-      # (final: prev: {
-      #   plasma5Packages = prev.plasma5Packages.overrideScope' (qtFinal: qtPrev: {
-      #      plasma-workspace = qtPrev.plasma-workspace.overrideAttrs (old: {
-      #        buildInputs = old.buildInputs ++ [ pkgs ];
-      #        patches = old.patches ++ [ "${self}/patches/sddm-background.patch" ];
-      #      });
-      #   });
-      # })
-      # ];
     in
     {
       devShells.${system}.default = (
