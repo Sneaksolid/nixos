@@ -32,7 +32,7 @@ in
     inherit system;
 
     modules = [
-      ({ ... }: { nixpkgs.overlays = [ sddmBackgroundPatch ]; })
+      ({ ... }: { nixpkgs.overlays = [ ]; })
       "${self}/modules/base.nix"
       "${self}/modules/users.nix"
       "${self}/modules/steam.nix"
