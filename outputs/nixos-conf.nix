@@ -8,6 +8,10 @@ let
       home-manager.useUserPackages = true;
     }
   ];
+
+  chiliCustom = final: prev: {
+    chiliCustom = prev.callPackage "${self}/pkgs/sddm-themes/chili" {};
+  };
 in
 {
   xpsFrank = nixpkgs.lib.nixosSystem {
@@ -24,7 +28,7 @@ in
     inherit system;
 
     modules = [
-      ({ ... }: { nixpkgs.overlays = [ ]; })
+      ({ ... }: { nixpkgs.overlays = [ chiliCustom ]; })
       "${self}/modules/base.nix"
       "${self}/modules/users.nix"
       "${self}/modules/steam.nix"
