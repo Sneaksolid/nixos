@@ -8,14 +8,6 @@ let
       home-manager.useUserPackages = true;
     }
   ];
-
-  sddmBackgroundPatch = final: prev: {
-    libsForQt5 = prev.libsForQt5.overrideScope' (qtFinal: qtPrev: {
-      plasma-workspace = qtPrev.plasma-workspace.overrideAttrs (old: {
-        patches = old.patches ++ [ "${self}/patches/sddm-background.patch" ];
-      });
-    });
-  };
 in
 {
   xpsFrank = nixpkgs.lib.nixosSystem {
