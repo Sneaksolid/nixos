@@ -14,7 +14,7 @@
   boot.extraModulePackages = [ ];
   boot.kernelParams = [
     "amdgpu.ppfeaturemask=0xffffffff"
-    "amd_pstate=guided"
+    # "amd_pstate=guided"
   ];
 
   # disable ipv6
