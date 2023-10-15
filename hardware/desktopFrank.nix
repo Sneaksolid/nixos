@@ -8,12 +8,14 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ "amdgpu" ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
   boot.kernelParams = [
     "amdgpu.ppfeaturemask=0xfff7ffff"
+    "amd_pstate=guided"
   ];
 
   # disable ipv6
@@ -50,7 +52,7 @@
 
   fileSystems."/mnt/NVME" =
     {
-      device = "/dev/disk/by-uuid/ee845fbe-c1e2-4e9b-9659-8b1d1449deb9";
+      device = "/dev/disk/by-uuid/221d1bf2-38c4-4de1-b6bc-dff366c3c6dd";
       fsType = "ext4";
       options = [ "defaults" "noatime" "commit=60" ];
     };
