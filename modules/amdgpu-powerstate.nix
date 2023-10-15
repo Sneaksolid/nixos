@@ -22,9 +22,9 @@
       
           fi
 
-          # if [[ -e "$device"/hwmon/hwmon0/power1_cap ]]; then
-          #     echo 350000000 > "$device"/hwmon/hwmon0/power1_cap
-          # fi
+          if [[ -e "$device"/hwmon/hwmon0/power1_cap ]]; then
+              echo 350000000 > "$device"/hwmon/hwmon0/power1_cap
+          fi
       done
     '';
   };
