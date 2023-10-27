@@ -78,6 +78,7 @@
     jetbrains.datagrip
     postgresql
     insomnia
+    gitkraken
 
     nodePackages.aws-cdk
     nodePackages.cdk8s-cli
