@@ -46,6 +46,29 @@ in
     ];
   };
 
+
+  "mathias@winFrank" = home-manager.lib.homeManagerConfiguration {
+    inherit pkgs;
+
+    extraSpecialArgs = {
+      inherit system;
+      inherit username;
+      inherit homeDirectory;
+      inherit self;
+      mainMod = "SUPER";
+    };
+
+    modules = [
+      sops-nix.homeManagerModules.sops
+      "${self}/modules/home-conf-base.nix"
+      "${self}/modules/home-nvim.nix"
+      "${self}/modules/home-zsh.nix"
+      "${self}/modules/home-zsh-wsl.nix"
+      "${self}/modules/home-work.nix"
+    ];
+  };
+
+
   "mathias@desktopFrank" = home-manager.lib.homeManagerConfiguration {
     inherit pkgs;
 
