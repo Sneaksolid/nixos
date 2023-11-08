@@ -70,10 +70,6 @@ in
         "*" = {
           bg = "${self}/pkgs/sway/wallpaper.jpg fill";
         };
-
-        "eDP-1" = {
-          scale = "1.2";
-        };
       };
 
       input = {
@@ -83,12 +79,6 @@ in
           repeat_delay = "300";
           repeat_rate = "50";
         };
-
-        "type:touchpad" = {
-          accel_profile = "adaptive";
-          pointer_accel = "0.2";
-          tap = "enabled";
-        };
       };
 
       window.titlebar = false;
@@ -97,19 +87,6 @@ in
         inner = 5;
         outer = 10;
       };
-
-      workspaceOutputAssign = [
-        { output = "eDP-1"; workspace = "1"; }
-
-        { output = "Lenovo Group Limited P27h-20 V906BZ70"; workspace = "2"; }
-        { output = "Lenovo Group Limited P27h-20 V906BZ70"; workspace = "3"; }
-        { output = "Lenovo Group Limited P27h-20 V906BZ70"; workspace = "4"; }
-        { output = "Lenovo Group Limited P27h-20 V906BZ70"; workspace = "5"; }
-        { output = "Lenovo Group Limited P27h-20 V906BZ70"; workspace = "6"; }
-        { output = "Lenovo Group Limited P27h-20 V906BZ70"; workspace = "7"; }
-
-        { output = "Lenovo Group Limited LEN P27h-10 0x00007B38"; workspace = "9"; }
-      ];
 
       keybindings = mkOptionDefault {
         "${modifier}+q" = "kill";
@@ -126,7 +103,7 @@ in
 
   programs.zsh.initExtra = ''
     hostname=$(hostname)
-    if [[ "$hostname" = "xpsFrank" ]]; then
+    if [[ "$hostname" = "xpsFrank" ]] || [[ "$hostname" = "desktopFrank" ]]; then
         if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
         	exec sway
         fi

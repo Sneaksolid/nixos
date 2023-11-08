@@ -99,7 +99,7 @@
 
   programs.zsh.initExtra = ''
     hostname=$(hostname)
-    if [[ "$hostname" = "xpsFrank" ]]; then
+    if [[ "$hostname" = "xpsFrank" ]] | [[ "$hostname" = "desktopFrank" ]]; then
         if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
         	exec Hyprland
         fi

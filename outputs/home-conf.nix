@@ -34,6 +34,7 @@ in
       sops-nix.homeManagerModules.sops
       "${self}/modules/home-conf-base.nix"
       "${self}/modules/home-sway.nix"
+      "${self}/modules/home-sway-xps-outputs.nix"
       "${self}/modules/home-waybar.nix"
       "${self}/modules/home-mako.nix"
       "${self}/modules/home-wofi.nix"
@@ -84,6 +85,7 @@ in
       sops-nix.homeManagerModules.sops
       "${self}/modules/home-conf-base.nix"
       "${self}/modules/home-sway.nix"
+      "${self}/modules/home-sway-desktop-outputs.nix"
       "${self}/modules/home-waybar.nix"
       "${self}/modules/home-mako.nix"
       "${self}/modules/home-wofi.nix"

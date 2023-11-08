@@ -31,6 +31,7 @@ in
       ({ ... }: { nixpkgs.overlays = [ chiliCustom ]; })
       "${self}/modules/base.nix"
       "${self}/modules/users.nix"
+      "${self}/modules/amdgpu-powerstate.nix"
       "${self}/hardware/desktopFrank.nix"
     ] ++ hm-config;
   };
