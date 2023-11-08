@@ -82,16 +82,16 @@ in
 
     modules = [
       sops-nix.homeManagerModules.sops
-      plasma-manager.homeManagerModules.plasma-manager
       "${self}/modules/home-conf-base.nix"
-      "${self}/modules/home-plasma-config.nix"
+      "${self}/modules/home-sway.nix"
+      "${self}/modules/home-waybar.nix"
+      "${self}/modules/home-mako.nix"
+      "${self}/modules/home-wofi.nix"
       "${self}/modules/home-alacritty.nix"
       "${self}/modules/home-nvim.nix"
       "${self}/modules/home-zsh.nix"
-      "${self}/modules/home-discord.nix"
       "${self}/modules/home-slack.nix"
       "${self}/modules/home-teams.nix"
-      "${self}/modules/home-steam.nix"
       "${self}/modules/home-work.nix"
     ];
   };
