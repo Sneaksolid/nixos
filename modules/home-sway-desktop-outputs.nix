@@ -8,18 +8,20 @@
         "DP-1" = {
 	  position = "1440 0";
 	  mode = "2560x1440@143.973Hz";
-	  adaptive_sync = "on";
+	  adaptive_sync = "off";
 	};
 	
 	"DP-2" = {
 	  position = "0 -700";
 	  transform = "270";
 	  mode = "2560x1440@143.998Hz";
+	  adaptive_sync = "off";
 	};
 
 	"DP-3" = {
 	  position = "4000 0";
 	  mode = "2560x1440@143.998Hz";
+	  adaptive_sync = "off";
 	};
       };
 
