@@ -79,6 +79,7 @@
     postgresql
     insomnia
     gitkraken
+    drawio
 
     nodePackages.aws-cdk
     nodePackages.cdk8s-cli
