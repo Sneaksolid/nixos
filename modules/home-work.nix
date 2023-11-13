@@ -98,6 +98,7 @@
     python39
     go-task
     go-mockery
+    delve
     mockgen
     redis
   ];
