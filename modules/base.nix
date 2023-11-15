@@ -83,6 +83,7 @@
     	127.0.0.1 kafka
   '';
 
+  # sway specific
   xdg = {
     portal = {
       enable = true;
