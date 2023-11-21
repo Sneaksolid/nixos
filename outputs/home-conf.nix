@@ -16,6 +16,9 @@ let
     inherit system;
     config.allowUnfree = true;
     config.xdg.configHome = configHome;
+    overlays = [
+      (final: prev: {swagger-ui-watcher = prev.callPackage "${self}/pkgs/swagger-ui-watcher" {};})
+    ];
   };
 in
 {

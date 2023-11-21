@@ -82,6 +82,7 @@
 
     nodePackages.aws-cdk
     nodePackages.cdk8s-cli
+    swagger-ui-watcher
 
     docker-compose
     docker-buildx
